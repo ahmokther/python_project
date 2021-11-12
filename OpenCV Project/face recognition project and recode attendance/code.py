@@ -1,11 +1,26 @@
+"""
+#pip install opencv-python
+#pip install numpy 
+when we add face-recognition module
+#1 download vs code and add c++ desktop development than install
+#2 install Cmake from Cmake website and add path in our computer
+#3 pip install cmake
+#4 pip install  dlib
+#5 pip install face-recognition
+then follow the code.
+
+
+"""
+
+
 import cv2
 import numpy as np
 import face_recognition
 import os
 from datetime import datetime
 
-
-path = 'class people'
+#when we run this project we add floder with image which we detected.
+path = 'class people' # this path indicate class people floder.
 images =[]
 classNames = []
 myList = os.listdir(path)
@@ -28,7 +43,7 @@ def findEncodings(images):
     return encodeList
 
 def MarkAttendance(name):
-    with open('Attendance.csv','r+') as f:
+    with open('Attendance.csv','r+') as f: #this function recode attendance so we add csv file'Attendance.csv'
         myDateList = f.readline()
         nameList = []
 
